@@ -21,9 +21,9 @@ async def on_ready():
     print('\n'.join('>'+ server.name for server in servers))
     print('------')
 
-@bot.commands(name="alert")
+@bot.command(name="alert")
 async def alert(ctx):
-    pass
+    await ctx.message.channel.send("alerted")
 
 
 bot.run(TOKEN)
